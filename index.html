@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sibgha Carney | CV</title>
+<title>Sibgha | CV</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -17,23 +17,22 @@
 
 body{
   background:#eef2f7;
-  color:#1f2937;
+  color:#111827;
   padding:20px;
 }
 
-/* MAIN CONTAINER */
 .container{
-  max-width:950px;
+  max-width:980px;
   margin:auto;
   background:white;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
   border-radius:12px;
   overflow:hidden;
+  box-shadow:0 12px 35px rgba(0,0,0,0.08);
 }
 
 /* HEADER */
 .header{
-  background:linear-gradient(135deg,#1f2937,#111827);
+  background:linear-gradient(135deg,#111827,#1f2937);
   color:white;
   display:flex;
   align-items:center;
@@ -49,7 +48,6 @@ body{
   object-fit:cover;
 }
 
-/* NAME */
 .header h1{
   font-size:30px;
 }
@@ -57,20 +55,19 @@ body{
 .header p{
   font-size:14px;
   opacity:0.9;
-  margin-top:4px;
+  margin-top:5px;
 }
 
-/* CONTACT */
 .contact{
   margin-top:10px;
   font-size:13px;
   display:flex;
-  gap:15px;
   flex-wrap:wrap;
+  gap:12px;
   opacity:0.9;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{
   padding:25px 30px;
 }
@@ -78,55 +75,39 @@ body{
 .title{
   font-size:18px;
   font-weight:600;
-  margin-bottom:15px;
-  color:#111827;
   border-left:5px solid #2563eb;
   padding-left:10px;
+  margin-bottom:15px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
 }
 
 /* SKILLS */
-.skills{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.skills ul{
-  list-style:none;
-}
-
 .skills li{
-  margin-bottom:8px;
+  list-style:none;
   padding:7px 10px;
   background:#f3f4f6;
+  margin-bottom:6px;
   border-radius:6px;
   font-size:13px;
-  transition:0.3s;
 }
 
-.skills li:hover{
-  background:#2563eb;
-  color:white;
-  transform:translateX(5px);
-}
-
-/* PROJECT BOX */
+/* BOX */
 .box{
-  margin-bottom:15px;
+  background:#f9fafb;
   padding:15px;
   border-left:4px solid #2563eb;
-  background:#f9fafb;
   border-radius:6px;
-  transition:0.3s;
-}
-
-.box:hover{
-  transform:scale(1.01);
-  background:#eef2ff;
+  margin-bottom:12px;
 }
 
 .box h3{
-  margin-bottom:5px;
+  font-size:15px;
 }
 
 .small{
@@ -134,14 +115,32 @@ body{
   color:#6b7280;
 }
 
-/* RESPONSIVE */
-@media(max-width:700px){
+/* BADGE */
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  background:#e5e7eb;
+  border-radius:6px;
+  font-size:12px;
+  margin:3px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:15px;
+  font-size:12px;
+  color:#6b7280;
+  background:#f3f4f6;
+}
+
+@media(max-width:768px){
   .header{
     flex-direction:column;
     text-align:center;
   }
 
-  .skills{
+  .grid{
     grid-template-columns:1fr;
   }
 
@@ -156,92 +155,115 @@ body{
 
 <div class="container">
 
-  <!-- HEADER -->
-  <div class="header">
+<!-- HEADER -->
+<div class="header">
 
-    <!-- 🔴 REPLACE IMAGE LINK BELOW -->
-    <img src="https://i.pravatar.cc/300" alt="profile">
+  <!-- 🔴 CHANGE YOUR IMAGE HERE -->
+  <img src="https://i.pravatar.cc/300" alt="profile">
 
-    <div>
-      <h1>Sibgha</h1>
-      <p>Computer Science Student | Aspiring Software Developer</p>
+  <div>
+    <h1>Sibgha</h1>
+    <p>Computer Science Student | Aspiring Software Engineer</p>
 
-      <p>
-        Motivated Computer Science student with strong foundation in programming,
-        databases, and networking. Passionate about building real-world software solutions.
-      </p>
+    <p>
+      Motivated Computer Science student with strong problem-solving skills,
+      software development knowledge, and passion for building real-world applications.
+    </p>
 
-      <div class="contact">
-        <span>📍 Pakistan</span>
-        <span>📧 bnest2026@gmail.com</span>
-      </div>
+    <div class="contact">
+      <span>📍 Pakistan</span>
+      <span>📧 bnest2026gmail.com</span>
+      
+      <span>💻 GitHub: https://github.com/sb-ai-coder</span>
+      <span>🔗 LinkedIn:  www.linkedin.com/in/sibgha-tanveer-4ba514386</span>
     </div>
-
-  </div>
-
-  <!-- SKILLS -->
-  <div class="section">
-    <div class="title">Technical Skills</div>
-
-    <div class="skills">
-      <div>
-        <ul>
-          <li>Java</li>
-          <li>Python</li>
-          <li>C / C++</li>
-          <li>SQL (Basic)</li>
-        </ul>
-      </div>
-
-      <div>
-        <ul>
-          <li>Basic Networking</li>
-          <li>Canva</li>
-          <li>MS Word</li>
-          <li>Excel</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="section">
-    <div class="title">Projects</div>
-
-    <div class="box">
-      <h3>Knight Travails (C)</h3>
-      <p class="small">Implemented shortest path algorithm for knight movement using BFS logic in C programming.</p>
-    </div>
-
-    <div class="box">
-      <h3>Tic Tac Toe Game (C++)</h3>
-      <p class="small">Developed a console-based two-player game with complete game logic and input handling.</p>
-    </div>
-
-    <div class="box">
-      <h3>Cinema Management System (Database)</h3>
-      <p class="small">Designed and implemented a database system for cinema booking and management operations.</p>
-    </div>
-
-    <div class="box">
-      <h3>Virtual Box Configuration</h3>
-      <p class="small">Configured virtual machines for operating system testing and network simulation.</p>
-    </div>
-
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="section">
-    <div class="title">Education</div>
-
-    <div class="box">
-      <h3>Bachelor in Computer Science</h3>
-      <p class="small">Currently pursuing CS degree focusing on programming, data structures, DBMS, and networking.</p>
-    </div>
-
   </div>
 
 </div>
+
+<!-- SUMMARY -->
+<div class="section">
+  <div class="title"> Summary</div>
+  <p class="small">
+    Dedicated Computer Science student with hands-on experience in programming,
+    database systems, and basic networking. Skilled in C, C++, Java, and Python with
+    a strong interest in software engineering and problem-solving. Seeking internship
+    opportunities to apply technical knowledge in real-world environments.
+  </p>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <div class="title">Technical Skills</div>
+
+  <div>
+    <span class="badge">Java</span>
+    <span class="badge">Python</span>
+    <span class="badge">C</span>
+    <span class="badge">C++</span>
+    <span class="badge">SQL</span>
+    <span class="badge">Networking (Basic)</span>
+    <span class="badge">DBMS</span>
+  </div>
+
+  <div style="margin-top:10px;">
+    <span class="badge">MS Word</span>
+    <span class="badge">Excel</span>
+    <span class="badge">Canva</span>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+  <div class="title">Projects</div>
+
+  <div class="box">
+    <h3>Knight Travails (C)</h3>
+    <p class="small">Built BFS-based shortest path solution for knight movement in chess. Improved algorithmic thinking & graph traversal logic.</p>
+  </div>
+
+  <div class="box">
+    <h3>Tic Tac Toe (C++)</h3>
+    <p class="small">Console-based interactive game with full logic, input validation, and player turn system.</p>
+  </div>
+
+  <div class="box">
+    <h3>Cinema Management System</h3>
+    <p class="small">Database-driven system for managing bookings, records, and cinema operations using SQL concepts.</p>
+  </div>
+
+  <div class="box">
+    <h3>Virtual Box Configuration</h3>
+    <p class="small">Configured virtual machines for OS testing, networking practice, and system simulation.</p>
+  </div>
+
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="section">
+  <div class="title">Achievements</div>
+
+  <div class="box">
+    <p class="small">✔ Completed  academic programming projects in C/C++ </p>
+    <p class="small">✔ Built database system project for real-world cinema management scenario</p>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+  <div class="title">Education</div>
+
+  <div class="box">
+    <h3>Bachelor in Computer Science</h3>
+    <p class="small">Currently pursuing degree with focus on programming, DBMS, networking, and software engineering fundamentals.</p>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  © 2026 Sibgha | Computer Science Portfolio CV
+</footer>
 
 </body>
 </html>
