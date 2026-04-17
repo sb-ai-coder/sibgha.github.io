@@ -40,12 +40,14 @@ body{
   gap:20px;
 }
 
+/* PROFILE IMAGE */
 .header img{
   width:130px;
   height:130px;
   border-radius:50%;
-  border:3px solid white;
+  border:4px solid white;
   object-fit:cover;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 .header h1{
@@ -80,21 +82,14 @@ body{
   margin-bottom:15px;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-
-/* SKILLS */
-.skills li{
-  list-style:none;
-  padding:7px 10px;
-  background:#f3f4f6;
-  margin-bottom:6px;
+/* BADGES */
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  background:#e5e7eb;
   border-radius:6px;
-  font-size:13px;
+  font-size:12px;
+  margin:3px;
 }
 
 /* BOX */
@@ -106,23 +101,9 @@ body{
   margin-bottom:12px;
 }
 
-.box h3{
-  font-size:15px;
-}
-
 .small{
   font-size:13px;
   color:#6b7280;
-}
-
-/* BADGE */
-.badge{
-  display:inline-block;
-  padding:5px 10px;
-  background:#e5e7eb;
-  border-radius:6px;
-  font-size:12px;
-  margin:3px;
 }
 
 /* FOOTER */
@@ -139,14 +120,6 @@ footer{
     flex-direction:column;
     text-align:center;
   }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .contact{
-    justify-content:center;
-  }
 }
 </style>
 </head>
@@ -158,8 +131,7 @@ footer{
 <!-- HEADER -->
 <div class="header">
 
-  <!-- 🔴 CHANGE YOUR IMAGE HERE -->
-  <img src="https://i.pravatar.cc/300" alt="profile">
+  
 
   <div>
     <h1>Sibgha</h1>
@@ -173,9 +145,8 @@ footer{
     <div class="contact">
       <span>📍 Pakistan</span>
       <span>📧 bnest2026gmail.com</span>
-      
-      <span>💻 GitHub: https://github.com/sb-ai-coder</span>
-      <span>🔗 LinkedIn:  www.linkedin.com/in/sibgha-tanveer-4ba514386</span>
+      <span>💻 GitHub: github.com/sb-ai-coder</span>
+      <span>🔗 LinkedIn: linkedin.com/in/sibgha-tanveer-4ba514386</span>
     </div>
   </div>
 
@@ -183,12 +154,11 @@ footer{
 
 <!-- SUMMARY -->
 <div class="section">
-  <div class="title"> Summary</div>
+  <div class="title">Summary</div>
   <p class="small">
     Dedicated Computer Science student with hands-on experience in programming,
     database systems, and basic networking. Skilled in C, C++, Java, and Python with
-    a strong interest in software engineering and problem-solving. Seeking internship
-    opportunities to apply technical knowledge in real-world environments.
+    a strong interest in software engineering and problem-solving.
   </p>
 </div>
 
@@ -196,21 +166,16 @@ footer{
 <div class="section">
   <div class="title">Technical Skills</div>
 
-  <div>
-    <span class="badge">Java</span>
-    <span class="badge">Python</span>
-    <span class="badge">C</span>
-    <span class="badge">C++</span>
-    <span class="badge">SQL</span>
-    <span class="badge">Networking (Basic)</span>
-    <span class="badge">DBMS</span>
-  </div>
-
-  <div style="margin-top:10px;">
-    <span class="badge">MS Word</span>
-    <span class="badge">Excel</span>
-    <span class="badge">Canva</span>
-  </div>
+  <span class="badge">Java</span>
+  <span class="badge">Python</span>
+  <span class="badge">C</span>
+  <span class="badge">C++</span>
+  <span class="badge">SQL</span>
+  <span class="badge">DBMS</span>
+  <span class="badge">Networking</span>
+  <span class="badge">MS Word</span>
+  <span class="badge">Excel</span>
+  <span class="badge">Canva</span>
 </div>
 
 <!-- PROJECTS -->
@@ -219,22 +184,17 @@ footer{
 
   <div class="box">
     <h3>Knight Travails (C)</h3>
-    <p class="small">Built BFS-based shortest path solution for knight movement in chess. Improved algorithmic thinking & graph traversal logic.</p>
+    <p class="small">BFS-based shortest path algorithm in chess board movement.</p>
   </div>
 
   <div class="box">
     <h3>Tic Tac Toe (C++)</h3>
-    <p class="small">Console-based interactive game with full logic, input validation, and player turn system.</p>
+    <p class="small">Console-based game with full logic and validation.</p>
   </div>
 
   <div class="box">
     <h3>Cinema Management System</h3>
-    <p class="small">Database-driven system for managing bookings, records, and cinema operations using SQL concepts.</p>
-  </div>
-
-  <div class="box">
-    <h3>Virtual Box Configuration</h3>
-    <p class="small">Configured virtual machines for OS testing, networking practice, and system simulation.</p>
+    <p class="small">Database project for managing bookings and records using SQL.</p>
   </div>
 
 </div>
@@ -244,8 +204,8 @@ footer{
   <div class="title">Achievements</div>
 
   <div class="box">
-    <p class="small">✔ Completed  academic programming projects in C/C++ </p>
-    <p class="small">✔ Built database system project for real-world cinema management scenario</p>
+    <p class="small">✔ Completed programming projects in C/C++</p>
+    <p class="small">✔ Built database management system project</p>
   </div>
 </div>
 
@@ -255,14 +215,14 @@ footer{
 
   <div class="box">
     <h3>Bachelor in Computer Science</h3>
-    <p class="small">Currently pursuing degree with focus on programming, DBMS, networking, and software engineering fundamentals.</p>
+    <p class="small">Currently pursuing degree in software engineering, DBMS, and networking.</p>
   </div>
 </div>
 
 </div>
 
 <footer>
-  © 2026 Sibgha | Computer Science Portfolio CV
+  © 2026 Sibgha | CV Portfolio
 </footer>
 
 </body>
