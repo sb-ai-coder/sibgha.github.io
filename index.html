@@ -321,7 +321,6 @@
             <div style="margin-top: 20px;">
                 <a href="#projects" class="btn btn-outline">📁 View Projects</a>
                 <a href="#contact" class="btn btn-outline">📧 Contact Me</a>
-                <button onclick="downloadResume()" class="btn btn-outline">📄 Download Resume</button>
             </div>
         </div>
     </div>
@@ -458,29 +457,24 @@
             alert(details[projectName] || 'Project details coming soon!');
         }
 
-        // Download Resume Function
-        function downloadResume() {
-            alert('Resume download feature will be available soon! 📄\n\nYou can manually share your resume with the teacher.');
-        }
-
         // Show Message Function
         function showMessage() {
             alert('👋 Hello! Thanks for visiting my portfolio.\n\nYou can reach me at: bnest2026@gmail.com\n\nLet\'s connect!');
         }
 
-    // Profile image click animation
-window.addEventListener('load', function() {
-    const profileImg = document.getElementById('profileImg');
-    if(profileImg) {
-        profileImg.addEventListener('click', function() {
-            this.style.transform = 'rotate(360deg)';
-            setTimeout(() => {
-                this.style.transform = 'rotate(0deg)';
-            }, 500);
-            alert('🌟 Thanks for visiting my portfolio! 🌟');
+        // Profile image click animation
+        window.addEventListener('load', function() {
+            const profileImg = document.getElementById('profileImg');
+            if(profileImg) {
+                profileImg.addEventListener('click', function() {
+                    this.style.transform = 'rotate(360deg)';
+                    setTimeout(() => {
+                        this.style.transform = 'rotate(0deg)';
+                    }, 500);
+                    alert('🌟 Thanks for visiting my portfolio! 🌟');
+                });
+            }
         });
-    }
-});
 
         // Animate skill items on page load
         window.addEventListener('load', function() {
