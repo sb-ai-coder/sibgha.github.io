@@ -312,7 +312,7 @@
     <!-- Header Section -->
     <div class="header">
         <div class="container">
-            <img src="https://via.placeholder.com/130" alt="Profile" id="profileImg">
+            <img src="profile.jpg" alt="Profile" id="profileImg">
             <h1>Sibgha</h1>
             <p class="tagline">Computer Science Student | Aspiring Software Engineer</p>
             <p>📍 Pakistan</p>
@@ -468,14 +468,19 @@
             alert('👋 Hello! Thanks for visiting my portfolio.\n\nYou can reach me at: bnest2026@gmail.com\n\nLet\'s connect!');
         }
 
-        // Profile image click animation
-        document.getElementById('profileImg').addEventListener('click', function() {
+    // Profile image click animation
+window.addEventListener('load', function() {
+    const profileImg = document.getElementById('profileImg');
+    if(profileImg) {
+        profileImg.addEventListener('click', function() {
             this.style.transform = 'rotate(360deg)';
             setTimeout(() => {
                 this.style.transform = 'rotate(0deg)';
             }, 500);
             alert('🌟 Thanks for visiting my portfolio! 🌟');
         });
+    }
+});
 
         // Animate skill items on page load
         window.addEventListener('load', function() {
