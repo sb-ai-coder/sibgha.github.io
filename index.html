@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sibgha | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Sibgha | Professional Portfolio</title>
     <style>
+        /* ========== PROFESSIONAL COLOR THEME ========== */
+        /* Deep Slate Blue & Cool Gray Palette – conveys trust, clarity, and modern professionalism */
+        :root {
+            --primary-dark: #1e2a3e;     /* Slate navy – main gradient start */
+            --primary-mid: #2c3e50;      /* Deep blue-gray – gradient end */
+            --accent-blue: #2c5282;      /* Professional blue for accents, buttons */
+            --accent-hover: #1a365d;     /* Darker hover state */
+            --gray-light: #f8fafc;       /* Clean light background for cards */
+            --gray-border: #e2e8f0;      /* Subtle borders */
+            --text-dark: #0f172a;        /* Readable dark text */
+            --text-muted: #475569;       /* Secondary text */
+            --white: #ffffff;
+            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+        }
+
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
@@ -18,27 +34,23 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, 'Roboto', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            animation: fadeIn 1.5s ease-in;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #eef2f5 0%, #e2e8f0 100%);
+            animation: fadeIn 1.2s ease-out;
         }
 
         /* Fade In Animation */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* Slide Up Animation */
         @keyframes slideUp {
             from {
-                transform: translateY(50px);
+                transform: translateY(35px);
                 opacity: 0;
             }
             to {
@@ -47,240 +59,279 @@
             }
         }
 
-        /* Bounce Animation for Buttons */
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-5px);
-            }
+        /* subtle bounce for CTA buttons */
+        @keyframes softBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
         }
 
         /* Container */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* Card Style */
+        /* Modern Card Style */
         .card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: slideUp 0.8s ease-out;
+            background: var(--white);
+            border-radius: 28px;
+            padding: 32px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            animation: slideUp 0.6s ease-out backwards;
+            border: 1px solid rgba(226, 232, 240, 0.6);
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--gray-border);
         }
 
-        /* Header Section with Gradient */
+        /* Header Section – professional gradient (slate to deep blue) */
         .header {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 0 0 50px 50px;
+            padding: 70px 20px 80px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-mid) 100%);
+            color: var(--white);
+            border-radius: 0 0 48px 48px;
             animation: slideUp 0.6s ease-out;
+            position: relative;
+            z-index: 1;
         }
 
-        /* PROFILE IMAGE - Your custom CSS */
+        /* PROFILE IMAGE - refined */
         .header img {
-            width: 130px;
-            height: 130px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            border: 4px solid white;
+            border: 4px solid rgba(255, 255, 255, 0.9);
             object-fit: cover;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.35s ease, box-shadow 0.3s;
         }
 
         .header img:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.25);
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         .tagline {
-            font-size: 1.2rem;
-            opacity: 0.95;
+            font-size: 1.25rem;
+            opacity: 0.92;
+            font-weight: 500;
         }
 
-        /* Button Styles */
+        /* refined button styles – professional palette */
         .btn {
             display: inline-block;
-            padding: 12px 28px;
+            padding: 12px 30px;
             margin: 10px 8px;
-            border-radius: 50px;
+            border-radius: 40px;
             text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            transition: all 0.25s ease;
             cursor: pointer;
             border: none;
-            animation: bounce 2s infinite;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
         }
 
         .btn-primary {
-            background: #667eea;
+            background: var(--accent-blue);
             color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 12px rgba(44, 82, 130, 0.25);
         }
 
         .btn-primary:hover {
-            background: #5a67d8;
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(44, 82, 130, 0.35);
         }
 
         .btn-secondary {
             background: white;
-            color: #667eea;
-            border: 2px solid #667eea;
+            color: var(--accent-blue);
+            border: 1.5px solid var(--accent-blue);
         }
 
         .btn-secondary:hover {
-            background: #667eea;
+            background: var(--accent-blue);
             color: white;
-            transform: scale(1.05);
+            transform: translateY(-2px);
         }
 
         .btn-outline {
             background: transparent;
             color: white;
-            border: 2px solid white;
+            border: 1.5px solid rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(2px);
         }
 
         .btn-outline:hover {
             background: white;
-            color: #667eea;
-            transform: scale(1.05);
+            color: var(--primary-dark);
+            border-color: white;
+            transform: translateY(-2px);
         }
 
-        /* Skills Section */
+        /* Skills Grid – refined style */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
         }
 
         .skill-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px;
+            background: linear-gradient(115deg, #f1f5f9 0%, #ffffff 100%);
+            color: var(--text-dark);
+            padding: 12px 8px;
             text-align: center;
-            border-radius: 10px;
-            transition: all 0.3s ease;
+            border-radius: 60px;
+            transition: all 0.25s ease;
             cursor: pointer;
+            font-weight: 500;
+            border: 1px solid var(--gray-border);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
         }
 
         .skill-item:hover {
-            transform: scale(1.05) rotate(2deg);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(-4px) scale(1.02);
+            background: var(--accent-blue);
+            color: white;
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 18px -8px rgba(44,82,130,0.3);
         }
 
         /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            gap: 28px;
+            margin-top: 24px;
         }
 
         .project-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 20px;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 24px;
             transition: all 0.3s ease;
             cursor: pointer;
+            border: 1px solid var(--gray-border);
+            box-shadow: var(--shadow-sm);
         }
 
         .project-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            background: white;
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: #cbd5e1;
         }
 
         .project-btn {
             display: inline-block;
-            margin-top: 15px;
-            padding: 8px 20px;
-            background: #667eea;
+            margin-top: 20px;
+            padding: 8px 24px;
+            background: var(--accent-blue);
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s ease;
+            border-radius: 40px;
+            transition: all 0.2s ease;
             border: none;
             cursor: pointer;
+            font-weight: 500;
+            font-size: 0.85rem;
         }
 
         .project-btn:hover {
-            background: #5a67d8;
-            transform: translateX(5px);
+            background: var(--accent-hover);
+            transform: translateX(4px);
         }
 
-        /* Contact Section */
+        /* Contact Section modern */
         .contact-links {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 18px;
+            margin-top: 24px;
         }
 
         .contact-btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 25px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            padding: 12px 28px;
+            background: var(--white);
+            color: var(--accent-blue);
             text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            border: none;
+            border-radius: 60px;
+            transition: all 0.25s ease;
+            border: 1px solid var(--gray-border);
+            font-weight: 600;
             cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .contact-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background: var(--accent-blue);
+            color: white;
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 18px rgba(44,82,130,0.2);
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 30px;
-            color: white;
-            margin-top: 30px;
+            padding: 32px 20px 40px;
+            color: #475569;
+            background: transparent;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(0,0,0,0.05);
         }
 
-        /* Back to Top Button */
+        .footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back to Top Button – refined */
         .back-to-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #667eea;
+            background: var(--accent-blue);
             color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
             opacity: 0;
             visibility: hidden;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            font-weight: bold;
+            font-size: 1.4rem;
         }
 
         .back-to-top.show {
@@ -289,57 +340,103 @@
         }
 
         .back-to-top:hover {
-            background: #5a67d8;
-            transform: scale(1.1);
+            background: var(--accent-hover);
+            transform: scale(1.08);
+        }
+
+        /* stats counters */
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 6px;
+        }
+
+        /* education and lists */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+        }
+        ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            .btn {
-                padding: 8px 20px;
-            }
+            h1 { font-size: 2rem; }
+            .btn { padding: 8px 20px; font-size: 0.85rem; }
+            .card { padding: 24px; }
+            .header { padding: 50px 20px 60px; }
+            .skills-grid { gap: 12px; }
+        }
+        
+        /* Additional polished touches */
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--primary-dark);
+            border-left: 5px solid var(--accent-blue);
+            padding-left: 18px;
+        }
+        h3 {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+        }
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
     </style>
 </head>
 <body>
 
     <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">↑</a>
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
 
     <!-- Header Section -->
     <div class="header">
         <div class="container">
-            <img src="profile.jpg" alt="Profile" id="profileImg">
+            <!-- Profile image (replace with actual image if available) -->
+           <img src="images/profile.jpg" alt="Sibgha" id="profileImg">
             <h1>Sibgha</h1>
             <p class="tagline">Computer Science Student | Aspiring Software Engineer</p>
             <p>📍 Pakistan</p>
-            
-            <!-- Buttons in Header -->
-            <div style="margin-top: 20px;">
-                <a href="#projects" class="btn btn-outline">📁 View Projects</a>
-                <a href="#contact" class="btn btn-outline">📧 Contact Me</a>
+            <div style="margin-top: 28px;">
+                <a href="#projects" class="btn btn-outline">📁 Explore Projects</a>
+                <a href="#contact" class="btn btn-outline">📧 Get in Touch</a>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <!-- Summary Card -->
+        <!-- About Me Card -->
         <div class="card" id="about">
             <h2>📖 About Me</h2>
-            <p>Dedicated Computer Science student with hands-on experience in programming, database systems, and basic networking. Skilled in C, C++, Java, and Python with a strong interest in software engineering and problem-solving.</p>
-            
-            <!-- Animated Stats (Graduation year removed) -->
-            <div style="display: flex; justify-content: space-around; margin-top: 20px; flex-wrap: wrap;">
+            <p style="margin-bottom: 16px;">Dedicated Computer Science student with hands-on experience in programming, database systems, and basic networking. Skilled in C, C++, Java, and Python with a strong interest in software engineering and problem-solving. Building efficient solutions and constantly refining my craft.</p>
+            <div style="display: flex; justify-content: flex-start; gap: 48px; margin-top: 24px; flex-wrap: wrap;">
                 <div style="text-align: center;">
-                    <h3 style="color: #667eea;">3+</h3>
-                    <p>Projects Completed</p>
+                    <div class="stat-number">3+</div>
+                    <p style="color: var(--text-muted); font-weight: 500;">Projects Completed</p>
                 </div>
                 <div style="text-align: center;">
-                    <h3 style="color: #667eea;">4</h3>
-                    <p>Programming Languages</p>
+                    <div class="stat-number">4</div>
+                    <p style="color: var(--text-muted); font-weight: 500;">Core Languages</p>
+                </div>
+                <div style="text-align: center;">
+                    <div class="stat-number">10+</div>
+                    <p style="color: var(--text-muted); font-weight: 500;">Technical Tools</p>
                 </div>
             </div>
         </div>
@@ -363,54 +460,53 @@
 
         <!-- Projects Card -->
         <div class="card" id="projects">
-            <h2>🚀 My Projects</h2>
+            <h2>🚀 Featured Projects</h2>
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
                     <h3>♞ Knight Travails</h3>
                     <p><strong>Tech:</strong> C, BFS, Data Structures</p>
-                    <p>BFS-based shortest path algorithm in chess board movement. Finds minimum moves for knight between any two positions.</p>
+                    <p>BFS-based shortest path algorithm for chess knight moves. Finds minimal steps between positions efficiently.</p>
                     <button class="project-btn" onclick="showProjectDetails('Knight Travails')">View Details →</button>
                 </div>
-
                 <!-- Project 2 -->
                 <div class="project-card">
                     <h3>⭕ Tic Tac Toe</h3>
                     <p><strong>Tech:</strong> C++</p>
-                    <p>Console-based game with full game logic and input validation. Two-player mode with win/draw detection.</p>
+                    <p>Console-based two-player game with win/draw detection, input validation, and intuitive game flow.</p>
                     <button class="project-btn" onclick="showProjectDetails('Tic Tac Toe')">View Details →</button>
                 </div>
-
                 <!-- Project 3 -->
                 <div class="project-card">
                     <h3>🎬 Cinema Management System</h3>
                     <p><strong>Tech:</strong> SQL, DBMS</p>
-                    <p>Database project for managing movie bookings, customer records, and show scheduling using SQL queries.</p>
+                    <p>Database project managing movie bookings, customer records, and show scheduling with optimized queries.</p>
                     <button class="project-btn" onclick="showProjectDetails('Cinema Management System')">View Details →</button>
                 </div>
             </div>
         </div>
 
-        <!-- Education Card (Graduation year removed) -->
+        <!-- Education Card (graduation year removed) -->
         <div class="card">
             <h2>🎓 Education</h2>
             <h3>Bachelor in Computer Science</h3>
-            <p>Currently pursuing degree in software engineering, DBMS, and networking.</p>
+            <p>Currently pursuing degree with focus on Software Engineering, Database Management Systems, and Computer Networks. Strong foundation in algorithms and data structures.</p>
         </div>
 
         <!-- Achievements Card -->
         <div class="card">
-            <h2>🏆 Achievements</h2>
-            <ul style="margin-left: 20px;">
-                <li>✓ Completed programming projects in C/C++</li>
-                <li>✓ Built database management system project</li>
-                <li>✓ Active participant in coding competitions</li>
+            <h2>🏆 Achievements & Highlights</h2>
+            <ul>
+                <li>Completed data-structure intensive projects in C/C++</li>
+                <li>Designed and implemented a cinema database system with complex SQL joins</li>
+                <li>Active participant in university coding competitions & hackathons</li>
+                <li>Consistent focus on clean code and algorithmic problem-solving</li>
             </ul>
         </div>
 
         <!-- Contact Card -->
         <div class="card" id="contact">
-            <h2>📫 Contact Me</h2>
+            <h2>📫 Let's Connect</h2>
             <div class="contact-links">
                 <a href="mailto:bnest2026@gmail.com" class="contact-btn">📧 Email</a>
                 <a href="https://github.com/sb-ai-coder" target="_blank" class="contact-btn">💻 GitHub</a>
@@ -422,7 +518,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <p>© 2026 Sibgha | Built with ❤️ | <a href="#" style="color: white;">Back to Top ↑</a></p>
+        <p>© 2026 Sibgha • Built with precision and care | <a href="#">Back to Top ↑</a></p>
     </div>
 
     <script>
@@ -436,58 +532,77 @@
             }
         });
 
-        // Smooth scroll for back to top and anchor links
+        // Smooth scroll for all anchor links (including back to top)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if(target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                const targetId = this.getAttribute('href');
+                if (targetId === "#" || targetId === "") return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
 
-        // Project Details Function
+        // Professional project details function with explicit content
         function showProjectDetails(projectName) {
-            const details = {
-                'Knight Travails': '🚀 This project implements BFS algorithm to find the shortest path for a knight on a chess board.\n\n📌 Problem: Find minimum moves for knight to reach target position.\n\n✅ Solution: Used queue-based BFS to explore all possible moves efficiently.',
-                'Tic Tac Toe': '🎮 Classic two-player console game built in C++.\n\n📌 Features: Complete game logic, input validation, win/draw detection.\n\n✅ Learnings: Array manipulation, game state checking, user input handling.',
-                'Cinema Management System': '🎬 Database system for cinema operations using SQL.\n\n📌 Features: Movie scheduling, seat booking, customer management.\n\n✅ Skills: SQL queries, database design, normalization.'
+            const detailsMap = {
+                'Knight Travails': `⚙️ Knight Travails – Shortest Path Finder\n\n📌 Problem: Determine the minimum number of moves for a knight to reach any target square on a chessboard.\n\n✅ Implementation: BFS algorithm in C, using queue-based level-order traversal. Optimized for 8x8 board, returns exact steps and path logic.\n\n💡 Key Takeaway: Graph traversal, adjacency mapping, and efficient state exploration.`,
+                'Tic Tac Toe': `🎮 Tic Tac Toe – Console Classic\n\n📌 Features: Two-player mode, interactive turn-based gameplay, win condition detection (rows, columns, diagonals), draw detection, and input validation.\n\n✅ Built with C++ focusing on modular functions and clear game state management.\n\n💡 Learnings: Array manipulation, user I/O handling, and conditional logic.`,
+                'Cinema Management System': `🎬 Cinema Management System – SQL Database Project\n\n📌 Features: Complete entity-relationship model for movie showtimes, customer bookings, seat reservations, and payment records.\n\n✅ Optimized SQL queries: Joins, aggregate functions, triggers for seat availability.\n\n💡 Outcome: Designed normalized schema with real-world cinema operations logic.`
             };
-            alert(details[projectName] || 'Project details coming soon!');
+            const message = detailsMap[projectName] || `📌 ${projectName} – innovative project showcasing strong programming fundamentals.\nMore details available upon request.`;
+            alert(message);
         }
 
-        // Show Message Function
+        // Show hello message
         function showMessage() {
-            alert('👋 Hello! Thanks for visiting my portfolio.\n\nYou can reach me at: bnest2026@gmail.com\n\nLet\'s connect!');
+            alert('👋 Hello! Thank you for exploring my portfolio.\n\nI’d love to connect — feel free to reach out via email or LinkedIn.\n📧 bnest2026@gmail.com\n\nLooking forward to collaborating!');
         }
 
-        // Profile image click animation
+        // Profile image click interaction (360 spin & greeting)
         window.addEventListener('load', function() {
             const profileImg = document.getElementById('profileImg');
-            if(profileImg) {
+            if (profileImg) {
                 profileImg.addEventListener('click', function() {
                     this.style.transform = 'rotate(360deg)';
+                    this.style.transition = 'transform 0.5s ease';
                     setTimeout(() => {
                         this.style.transform = 'rotate(0deg)';
                     }, 500);
-                    alert('🌟 Thanks for visiting my portfolio! 🌟');
+                    alert('✨ Thanks for stopping by! ✨\nLet’s build something great together.');
                 });
             }
-        });
 
-        // Animate skill items on page load
-        window.addEventListener('load', function() {
+            // Animate skill items with elegant staggered entrance
             const skills = document.querySelectorAll('.skill-item');
-            skills.forEach((skill, index) => {
+            skills.forEach((skill, idx) => {
+                skill.style.opacity = '0';
+                skill.style.transform = 'translateY(12px)';
                 setTimeout(() => {
-                    skill.style.opacity = '0';
-                    skill.style.transform = 'scale(0)';
-                    setTimeout(() => {
-                        skill.style.opacity = '1';
-                        skill.style.transform = 'scale(1)';
-                    }, 100);
-                }, index * 50);
+                    skill.style.transition = 'all 0.3s ease';
+                    skill.style.opacity = '1';
+                    skill.style.transform = 'translateY(0)';
+                }, idx * 50);
+            });
+            
+            // Optional: add dynamic year to footer
+            const footerYear = document.querySelector('.footer p');
+            if (footerYear && footerYear.innerHTML.includes('2026')) {
+                const currentYear = new Date().getFullYear();
+                footerYear.innerHTML = footerYear.innerHTML.replace('2026', currentYear);
+            }
+        });
+        
+        // Additional hover polish on project cards for consistency
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.cursor = 'pointer';
             });
         });
     </script>
